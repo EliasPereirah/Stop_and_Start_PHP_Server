@@ -1,2 +1,6 @@
 <?php
-exec("php -S localhost:8080", $output);
+if ( php_sapi_name() == 'cli'){
+    echo "..........\n";
+    // start php server on port 8080
+    exec("php -S localhost:8080");
+}
